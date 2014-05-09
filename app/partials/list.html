@@ -1,5 +1,6 @@
 <ul>
 	<li ng-repeat="item in items track by $index">
 		{{item}}
+		<a href="#" ng-click="remove($index)">X</a>
 	</li>
 </ul>

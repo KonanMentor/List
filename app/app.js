@@ -23,12 +23,18 @@ listApp.factory("Items", function (){
 		list : ["a", "b", 3.14],
 		add : function (item) {
 			this.list.push(item);
+		},
+		remove : function (index) {
+			this.list.splice(index, 1);
 		}
 	};
 });
 
 listApp.controller("ListCtrl", ["$scope", "Items", function ($scope, Items){
 	$scope.items = Items.list;
+	$scope.remove = function (index) {
+		Items.remove(index);
+	};
 }]);
 
 listApp.controller("NewCtrl", ["$scope", "Items", function ($scope, Items){
