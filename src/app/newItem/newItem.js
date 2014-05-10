@@ -9,3 +9,14 @@ newItem.controller("NewItemCtrl", ["$scope", "Items", function ($scope, Items){
 		$scope.item = "";
 	};
 }]);
+
+newItem.directive("focusAfterFormSubmit", function () {
+	return {
+		link : function ($scope, element, attrs) {
+			$(element).focus();
+			$(element).closest("form").on("submit", function () {
+				$(element).focus();
+			})
+		}
+	};
+});
