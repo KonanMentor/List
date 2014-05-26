@@ -4,12 +4,20 @@
 module.exports = function (grunt) {
 	grunt.loadNpmTasks("grunt-contrib-uglify");
 	grunt.loadNpmTasks("grunt-contrib-concat");
+	grunt.loadNpmTasks("grunt-contrib-cssmin");
 
 	grunt.initConfig({
 		uglify: {
 			dev : {
 				files : {
 					"src/bundle.min.js" : "src/bundle.js"
+				}
+			}
+		},
+		cssmin: {
+			combine: {
+				files: {
+					"src/bundle.css" : ["src/app/**/*.css"]
 				}
 			}
 		},
@@ -22,5 +30,5 @@ module.exports = function (grunt) {
 		}
 	});
 
-	grunt.registerTask("build", ["concat", "uglify"]);
+	grunt.registerTask("build", ["concat", "uglify", "cssmin"]);
 };

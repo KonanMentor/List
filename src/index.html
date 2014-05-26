@@ -2,12 +2,21 @@
 <html>
 <head lang="en">
 	<meta charset="UTF-8">
+	<link rel="stylesheet" type="text/css" href="bundle.css"/>
 	<script type="text/javascript" src="bundle.js"></script>
 	<title>The list</title>
 </head>
 <body ng-app="listApp">
-	<a href="#list">list</a>
-	<a href="#new">new</a>
-	<div ng-view></div>
+	<nav>
+		<ul>
+			<li>
+				<a href="#list">list</a>
+			</li>
+			<li>
+				<a href="#new">new</a>
+			</li>
+		</ul>
+	</nav>
+	<main ng-view></main>
 </body>
 </html>
