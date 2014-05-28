@@ -17,3 +17,19 @@ listApp.config(["$routeProvider", function ($routeProvider){
 			redirectTo: "/list"
 		});
 }]);
+
+listApp.directive("navActiveWhen", ["$location", function ($location) {
+	return {
+		restrict: "A",
+		link: function(scope, element, attrs) {
+			scope.$on("$routeChangeSuccess", function () {
+				if (attrs.navActiveWhen === $location.path()) {
+					element.addClass("active");
+				}
+				else {
+					element.removeClass("active");
+				}
+			});
+		}
+	};
+}]);

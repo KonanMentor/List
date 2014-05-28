@@ -17,13 +17,13 @@ module.exports = function (grunt) {
 		cssmin: {
 			combine: {
 				files: {
-					"src/bundle.css" : ["src/app/**/*.css"]
+					"src/bundle.css" : ["src/app/**/*.css", "bower_components/bootstrap/dist/css/bootstrap.css"]
 				}
 			}
 		},
 		concat: {
 			js : {
-				src : ["bower_components/angular/angular.js", "bower_components/angular-route/angular-route.js", "bower_components/jquery/dist/jquery.js",
+				src : ["bower_components/jquery/dist/jquery.js", "bower_components/bootstrap/dist/js/bootstrap.js", "bower_components/angular/angular.js", "bower_components/angular-route/angular-route.js",
 					"src/common/items.js", "src/app/list/list.js", "src/app/newItem/newItem.js", "src/app/app.js"],
 				dest : "src/bundle.js"
 			}

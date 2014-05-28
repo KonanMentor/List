@@ -7,12 +7,15 @@
 	<title>The list</title>
 </head>
 <body ng-app="listApp">
-	<nav>
-		<ul>
-			<li>
+	<nav class="navbar navbar-default">
+		<div class="navbar-header">
+			<a class="navbar-brand" href="#">The List App</a>
+		</div>
+		<ul class="nav navbar-nav">
+			<li nav-active-when="/list">
 				<a href="#list">list</a>
 			</li>
-			<li>
+			<li nav-active-when="/new">
 				<a href="#new">new</a>
 			</li>
 		</ul>
