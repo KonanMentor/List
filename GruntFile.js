@@ -23,8 +23,8 @@ module.exports = function (grunt) {
 		},
 		concat: {
 			js : {
-				src : ["bower_components/jquery/dist/jquery.js", "bower_components/bootstrap/dist/js/bootstrap.js", "bower_components/angular/angular.js", "bower_components/angular-route/angular-route.js",
-					"src/common/items.js", "src/app/list/list.js", "src/app/newItem/newItem.js", "src/app/app.js"],
+				src : ["bower_components/jquery/dist/jquery.js", "bower_components/bootstrap/dist/js/bootstrap.js", "bower_components/angular/angular.js", "bower_components/angular-route/angular-route.js", "bower_components/angular-ui-bootstrap/ui-bootstrap-tpls-0.11.0.js",
+					"src/common/**/*.js", "src/app/**/*.js"],
 				dest : "src/bundle.js"
 			}
 		}

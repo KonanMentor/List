@@ -1,4 +1,9 @@
-<form ng-submit="add()">
-	<input type="text" ng-model="item" required focus-after-form-submit/>
-	<input type="submit"/>
-</form>
+<div ng-controller="AlertsCtrl">
+	<div ng-controller="NewItemCtrl">
+		<form ng-submit="ref.add('The item has been added successfully'); add();">
+			<input type="text" ng-model="item" required focus-after-form-submit placeholder="Some text here"/>
+			<input type="submit"/>
+		</form>
+		<alert ng-repeat="alert in ref.alerts" type="{{alert.type}}" close="ref.remove($index)">{{alert.msg}}</alert>
+	</div>
+</div>

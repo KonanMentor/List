@@ -1,7 +1,7 @@
 /**
  * Created by 123 on 10.05.2014.
  */
-var newItem = angular.module("newItem", ["items"]);
+var newItem = angular.module("newItem", ["items", "alerts", "ui.bootstrap"]);
 
 newItem.controller("NewItemCtrl", ["$scope", "Items", function ($scope, Items){
 	$scope.add = function () {

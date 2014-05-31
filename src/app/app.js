@@ -10,8 +10,8 @@ listApp.config(["$routeProvider", function ($routeProvider){
 			controller: "ListCtrl"
 		})
 		.when("/new", {
-			templateUrl: "app/newItem/newItem.html",
-			controller: "NewItemCtrl"
+			templateUrl: "app/newItem/newItem.html"
+			//controller: "NewItemCtrl"
 		})
 		.otherwise({
 			redirectTo: "/list"

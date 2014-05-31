@@ -1,6 +1,8 @@
-<ul>
-	<li ng-repeat="item in items track by $index">
+<ul class="list-group">
+	<li ng-repeat="item in items track by $index" class="list-group-item">
 		{{item}}
-		<a href="#" ng-click="remove($index)">X</a>
+		<a href="#" ng-click="remove($index)">
+			<span class="close pull-right">×</span>
+		</a>
 	</li>
 </ul>
