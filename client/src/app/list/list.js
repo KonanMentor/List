@@ -3,8 +3,20 @@
  */
 var list = angular.module("list", ["items"]);
 list.controller("ListCtrl", ["$scope", "Items", function ($scope, Items){
-	$scope.items = Items.list;
-	$scope.remove = function (index) {
-		Items.remove(index);
+	$scope.reload = function () {
+		Items.getItemsAsync(function (data) {
+			console.log("items loaded");
+			console.log(data);
+			$scope.items = data;
+		});
 	};
+
+	$scope.remove = function (id) {
+		console.log("remove " + id);
+		Items.remove(id, function () {
+			$scope.reload();
+		});
+	};
+
+	$scope.reload();
 }]);

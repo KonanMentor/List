@@ -3,14 +3,34 @@
  */
 var items = angular.module("items", []);
 
-items.factory("Items", function (){
+items.factory("Items", ['$http', function ($http){
+	var list = [];
 	return {
-		list : ["a", "b", 3.14],
-		add : function (item) {
-			this.list.push(item);
+		getItemsAsync : function (success, error) {
+			$http.get("http://192.168.1.35:8888/items").success(function (data) {
+				list = data;
+				success(data);
+			}).error(error);
 		},
-		remove : function (index) {
-			this.list.splice(index, 1);
+		add : function (text, success, error) {
+			$http.post("http://192.168.1.35:8888/items", {text: text})
+				.success(function() {
+					console.log("added");
+					angular.isFunction(success) && success();
+				})
+				.error(function () {
+					angular.isFunction(error) && error();
+				});
+		},
+		remove : function (id, success, error) {
+			$http.delete("http://192.168.1.35:8888/items/" + id)
+				.success(function() {
+					console.log("removed");
+					angular.isFunction(success) && success();
+				})
+				.error(function () {
+					angular.isFunction(error) && error();
+				});
 		}
 	};
-});
+}]);
