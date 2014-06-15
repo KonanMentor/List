@@ -2,3 +2,6 @@ client/node_modules/**/*
 server/node_modules/**/*
 client/bower_components/**/*
 .idea
+client/src/bundle.css
+client/src/bundle.js
+client/src/bundle.min.js
