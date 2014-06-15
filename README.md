@@ -66,7 +66,7 @@ DB connection error: failed to connect to [localhost:27017]
 Then check if MongoDB is launched.
 
 #### Start the client
-Python 3 should be installed
+[Python 3] should be installed
 * Go to *client* directory and run `grunt build`
 * Open *src* and run `python -m http.server 2000`
 * Open [http://localhost:2000]
@@ -83,3 +83,4 @@ Python 3 should be installed
 [AngularJS]:https://angularjs.org/
 [npm]:https://www.npmjs.org/
 [http://localhost:2000]:http://localhost:2000
+[Python 3]:https://www.python.org/downloads/
