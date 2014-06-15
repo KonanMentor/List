@@ -26,7 +26,7 @@ Installation
 [node.js] + [npm] should be installed
 
 ```
-git clone [git-repo-url] list
+git clone git@github.com:KonanMentor/List.git list
 cd list
 ```
 
