@@ -3,11 +3,6 @@ The List app
 
 The List app is a project just to practice with [AngularJS] and Git.
 
-Version
-----
-
-0.0.1
-
 Tech
 -----------
 
@@ -62,11 +57,19 @@ Server run on port 8888
 Connected to DB!
 ```
 
+If it prints
+```
+Server run on port 8888
+DB connection error: failed to connect to [localhost:27017]
+```
+
+Then check if MongoDB is launched.
+
 #### Start the client
 Python 3 should be installed
 * Go to *client* directory and run `grunt build`
-* Open *src* and run `python -m http.server` 2000
-* Open http://localhost:2000
+* Open *src* and run `python -m http.server 2000`
+* Open [http://localhost:2000]
 
 [node.js]:http://nodejs.org
 [Twitter Bootstrap]:http://twitter.github.com/bootstrap/
@@ -79,3 +82,4 @@ Python 3 should be installed
 [Karma]:http://karma-runner.github.io/
 [AngularJS]:https://angularjs.org/
 [npm]:https://www.npmjs.org/
+[http://localhost:2000]:http://localhost:2000
