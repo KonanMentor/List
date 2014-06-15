@@ -7,13 +7,13 @@ items.factory("Items", ['$http', function ($http){
 	var list = [];
 	return {
 		getItemsAsync : function (success, error) {
-			$http.get("http://192.168.1.35:8888/items").success(function (data) {
+			$http.get("http://localhost:8888/items").success(function (data) {
 				list = data;
 				success(data);
 			}).error(error);
 		},
 		add : function (text, success, error) {
-			$http.post("http://192.168.1.35:8888/items", {text: text})
+			$http.post("http://localhost:8888/items", {text: text})
 				.success(function() {
 					console.log("added");
 					angular.isFunction(success) && success();
@@ -23,7 +23,7 @@ items.factory("Items", ['$http', function ($http){
 				});
 		},
 		remove : function (id, success, error) {
-			$http.delete("http://192.168.1.35:8888/items/" + id)
+			$http.delete("http://localhost:8888/items/" + id)
 				.success(function() {
 					console.log("removed");
 					angular.isFunction(success) && success();
