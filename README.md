@@ -89,9 +89,12 @@ DB connection error: failed to connect to [localhost:27017]
 Then check if MongoDB is launched.
 
 #### Start the client
-[Python 3] should be installed
+Install *http-server*
+```
+npm i http-server -g
+```
 * Go to *client* directory and run `grunt build`
-* Open *src* and run `python -m http.server 2000`
+* Open *src* and run `http-server -p 2000`
 * Open [http://localhost:2000]
 
 [node.js]:http://nodejs.org
