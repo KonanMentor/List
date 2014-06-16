@@ -1,6 +1,5 @@
-client/node_modules/**/*
-server/node_modules/**/*
-client/bower_components/**/*
+node_modules/
+bower_components/
 .idea
 client/src/bundle.css
 client/src/bundle.js
