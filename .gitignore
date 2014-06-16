@@ -4,3 +4,4 @@ bower_components/
 client/src/bundle.css
 client/src/bundle.js
 client/src/bundle.min.js
+server/serverstart.bat
