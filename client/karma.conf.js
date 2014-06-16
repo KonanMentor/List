@@ -3,11 +3,6 @@
 
 module.exports = function(config) {
   config.set({
-
-    // base path that will be used to resolve all patterns (eg. files, exclude)
-    basePath: '../),
-
-
     // frameworks to use
     // available frameworks: https://npmjs.org/browse/keyword/karma-adapter
     frameworks: ['jasmine'],
@@ -19,20 +14,6 @@ module.exports = function(config) {
 	  'bower_components/angular-mocks/angular-mocks.js',
       'test/**/*.spec.js'
     ],
-
-
-    // list of files to exclude
-    exclude: [
-      
-    ],
-
-
-    // preprocess matching files before serving them to the browser
-    // available preprocessors: https://npmjs.org/browse/keyword/karma-preprocessor
-    preprocessors: {
-    
-    },
-
 
     // test results reporter to use
     // possible values: 'dots', 'progress'
@@ -59,11 +40,14 @@ module.exports = function(config) {
 
     // start these browsers
     // available browser launchers: https://npmjs.org/browse/keyword/karma-launcher
-    browsers: ['Chrome'],
+    browsers: ['PhantomJS'],
+
+
+	plugins: ['karma-jasmine', 'karma-phantomjs-launcher'],
 
 
     // Continuous Integration mode
     // if true, Karma captures browsers, runs the tests and exits
-    singleRun: true
+    singleRun: false
   });
 };
