@@ -15,7 +15,6 @@ items.factory("Items", ['$http', function ($http){
 		add : function (text, success, error) {
 			$http.post("http://localhost:8888/items", {text: text})
 				.success(function() {
-					console.log("added");
 					angular.isFunction(success) && success();
 				})
 				.error(function () {
@@ -25,7 +24,6 @@ items.factory("Items", ['$http', function ($http){
 		remove : function (id, success, error) {
 			$http.delete("http://localhost:8888/items/" + id)
 				.success(function() {
-					console.log("removed");
 					angular.isFunction(success) && success();
 				})
 				.error(function () {
