@@ -23,12 +23,12 @@ The List app uses a number of open source projects to work properly:
 Installation
 --------------
 
-[node.js] + [npm] should be installed
-
 ```
 git clone git@github.com:KonanMentor/List.git list
 cd list
 ```
+
+Make sure that [node.js] is installed
 
 #### Server installation
 
@@ -39,10 +39,33 @@ npm i
 [MongoDB] needs to be installed
 
 #### Client installation
+
+Following npm packages should be installed globally
+* bower - to load necessary javascript libraries
+* grunt-cli - to build client from console
+* karma-cli - for testing from console
+
+```
+npm install bower grunt-cli karma-cli -g
+```
+
+Install necessary packages and load javascript libraries
 ```
 cd client
 npm i
 bower i
+```
+
+Testing
+----
+Make sure that *karma-cli* is installed globally
+
+To run tests fast use [PhantomJS]. Install it and [set] PHANTOMJS_BIN variable.
+
+#### Client testing
+Move to *client* directory and run
+```
+karma start --single-run
 ```
 
 Running
@@ -84,3 +107,5 @@ Then check if MongoDB is launched.
 [npm]:https://www.npmjs.org/
 [http://localhost:2000]:http://localhost:2000
 [Python 3]:https://www.python.org/downloads/
+[set]:http://karma-runner.github.io/0.8/config/browsers.html
+[PhantomJS]:http://phantomjs.org/
